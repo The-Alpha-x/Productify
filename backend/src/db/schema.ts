@@ -5,7 +5,7 @@ export const users = pgTable("users", {
     id: text("id").primaryKey(),
     email: text("email").notNull().unique(),
     name: text("name"),
-    imageURL: text("image_url"),
+    imageUrl: text("image_url"),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow().notNull().$onUpdate(() => new Date())
 });
@@ -14,7 +14,7 @@ export const products = pgTable("products", {
     id: uuid("id").defaultRandom().primaryKey(),
     title: text("title").notNull(),
     description: text("description").notNull(),
-    imageURL: text("image_url").notNull(),
+    imageUrl: text("image_url").notNull(),
     userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow().notNull().$onUpdate(() => new Date())
