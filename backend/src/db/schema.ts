@@ -25,7 +25,7 @@ export const comments = pgTable("comments", {
     content: text("content").notNull(),
     userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
     productId: text("product_id").notNull().references(() => products.id, { onDelete: "cascade" }),
-
+    createdAt: timestamp("created_at", { mode: "date" }).defaultNow().notNull(),
 })
 
 // 🔴 Relations define how tables connect to each other. This enables Drizzle's query API
