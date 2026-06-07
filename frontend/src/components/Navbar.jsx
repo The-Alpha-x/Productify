@@ -24,15 +24,15 @@ function Navbar() {
                 </div>
                 {isSignedIn ? (
                     <>
-                        <Link to="/create" className='btn btn-primary btn-sm gap-1'>
+                        <Link to="/create" className='btn btn-primary btn-sm gap-1 mx-1'>
                             <Plus className='size-4' />
                             <span className='hidden sm:inline'>New Product</span>
                         </Link>
-                        <Link to="/create" className='btn btn-primary btn-sm gap-1'>
+                        <Link to="/create" className='btn btn-primary btn-sm gap-1 mx-1'>
                             <User className='size-4' />
                             <span className='hidden sm:inline'>Profile</span>
                         </Link>
-                        <UserButton />
+                        <UserButton className='btn btn-primary btn-sm gap-1 mx-1' />
                     </>
                 ) : (
                     <>

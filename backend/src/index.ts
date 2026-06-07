@@ -10,7 +10,7 @@ import commentRoutes from "./routes/commentRoutes";
 
 const app = express();
 
-app.use(cors({ origin: ENV.FRONTEND_URL }));
+app.use(cors({ origin: ENV.FRONTEND_URL, credentials: true })); //allow the frontend to send cookies to the backend so that we can authenticate the user
 app.use(clerkMiddleware()); //auth obj will be attached to req
 app.use(express.json()); //to handle json data
 app.use(express.urlencoded({ extended: false })); //to handle form data
