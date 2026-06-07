@@ -4,8 +4,8 @@ import { requireAuth } from "@clerk/express";
 
 const router = Router();
 
-router.post("/", requireAuth(), commentController.createComment);
+router.post("/:productId", requireAuth(), commentController.createComment);
 
-router.delete("/:id", requireAuth(), commentController.deleteComment);
+router.delete("/:commentId", requireAuth(), commentController.deleteComment);
 
 export default router;
