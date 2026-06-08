@@ -14,8 +14,12 @@ function Navbar() {
                 {/* left */}
                 <div className='flex-1'>
                     <Link to="/" className='btn btn-ghost gap-2 normal-case text-xl'>
-                        <LucideApple className='w-8 h-8' />
-                        <span className='text-lg font-bold font-mono uppercase tracking-wider'>APPLE STORE</span>
+                        <img
+                            src="/logo.png"
+                            alt="Creator"
+                            className=" h-5 lg:h-5"
+                        />
+                        <span className='text-lg font-bold font-mono uppercase tracking-wider'>I-STORE</span>
                     </Link>
                 </div>
 
